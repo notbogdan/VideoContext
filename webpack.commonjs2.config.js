@@ -15,7 +15,14 @@ module.exports = {
     },
     module: {
         rules: [
-            { test: /\.css$/, use: "style!css" },
+            {
+                test: /\.css$/,
+                use: "style!css"
+            },
+            {
+                test: /\.(frag|vert)$/i,
+                use: "raw-loader"
+            },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
